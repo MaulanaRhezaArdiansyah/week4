@@ -1,0 +1,1 @@
+1. Dengan DOM kita dapat mengakses, merubah, menambahkan ataupun menghapus semua komponen / element yang ada di HTML

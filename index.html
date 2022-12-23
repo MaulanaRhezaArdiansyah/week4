@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        background-color: #c4c4c4;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 15px;
+        margin-top: 100px;
+        width: 500px;
+        height: 400px;
+        background-color: crimson;
+        border-radius: 8px;
+      }
+      form {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+      #name {
+        padding: 10px;
+      }
+      #submit {
+        padding: 10px 15px;
+      }
+      .result-box {
+        background-color: coral;
+        width: 70%;
+        height: 70%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        Name : <input type="text" id="name" />
+        <input type="submit" id="submit" />
+      </form>
+      <div class="result-box">
+        <p id="result"></p>
+      </div>
+    </div>
+    <script>
+      const result = document.getElementById("result");
+      const submitBtn = document.getElementById("submit");
+      const inputName = document.getElementById("name");
+
+      submitBtn.addEventListener("click", function () {
+        event.preventDefault();
+        result.innerHTML = inputName.value;
+      });
+    </script>
+  </body>
+</html>
