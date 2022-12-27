@@ -13,6 +13,7 @@ const addPost = (url, endpoint, method) => {
 
   addBtn.addEventListener("click", (el) => {
     el.preventDefault();
+    // mendapatkan value dari input form
     let name = document.getElementById("name").value;
     let post = document.getElementById("post").value;
 
@@ -21,6 +22,7 @@ const addPost = (url, endpoint, method) => {
       headers: {
         "Content-Type": "application/json",
       },
+      //   menuliskan/menambahkan value yang didapat ke dalam API
       body: JSON.stringify({
         name: name,
         post: post,
@@ -30,6 +32,7 @@ const addPost = (url, endpoint, method) => {
       .then((json) => {
         console.log(json);
         let result = document.getElementById("result");
+        // menampilkan data dari value yang didapat ke halaman web
         result.innerHTML += `
         <div class="card">
             <p>${json.name}</p>
@@ -41,6 +44,7 @@ const addPost = (url, endpoint, method) => {
   });
 };
 
+// menghapus data dari API
 const deletePost = (url, endpoint, id, method) => {
   let deleteBtn = document.getElementById("delete");
   //   dibuat async await supaya yang ditampilkan di console lebih dulu adalah fetching data, baru getPost dijalankan
