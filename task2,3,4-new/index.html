@@ -23,8 +23,12 @@
     <div id="container-results"></div>
     <script src="main.js"></script>
     <script>
-      addPost(`https://63a3f9ae9704d18da09a463d.mockapi.io/posts`);
-      deletePost(`https://63a3f9ae9704d18da09a463d.mockapi.io/posts/6`);
+      addPost(`https://63a3f9ae9704d18da09a463d.mockapi.io/posts`, "POST");
+      deletePost(
+        `https://63a3f9ae9704d18da09a463d.mockapi.io/posts`,
+        "DELETE",
+        5
+      );
       getPost();
     </script>
   </body>

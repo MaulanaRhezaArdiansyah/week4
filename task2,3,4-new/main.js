@@ -5,7 +5,7 @@ const addBtn = document.getElementById("add");
 const deleteBtn = document.getElementById("delete");
 
 // POST
-const addPost = (url) => {
+const addPost = (url, method) => {
   addBtn.addEventListener("click", async (el) => {
     el.preventDefault();
 
@@ -14,7 +14,7 @@ const addPost = (url) => {
 
     //   fetch
     await fetch(url, {
-      method: "POST",
+      method: method,
       body: JSON.stringify({
         name: name,
         post: post,
@@ -43,11 +43,11 @@ const addPost = (url) => {
 };
 
 // DELETE
-const deletePost = (url) => {
+const deletePost = (url, method, id) => {
   deleteBtn.addEventListener("click", async (el) => {
     el.preventDefault();
-    await fetch(url, {
-      method: "DELETE",
+    await fetch(`${url}/${id}`, {
+      method: method,
     }).then(() => console.log("Delete post successfull"));
     getPost();
   });
