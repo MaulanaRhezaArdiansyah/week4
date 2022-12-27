@@ -10,7 +10,7 @@ function fetchAPI(url, type, data) {
     fetch(url, {
       method: type,
       headers: {
-        "Content-type": "apllication/json",
+        "Content-type": "aplication/json",
       },
     })
       .then((res) => {

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="" id="form">
+      <input type="text" id="name" placeholder="Enter your name here" />
+      <textarea
+        name=""
+        id="post"
+        cols="30"
+        rows="5"
+        placeholder="What do you think?"
+      ></textarea>
+      <input type="submit" id="add" value="Add Post" />
+      <input type="submit" id="delete" value="Delete API Post" />
+    </form>
+    <div id="result"></div>
+    <script src="main.js"></script>
+    <script>
+      addPost("https://63a3f9ae9704d18da09a463d.mockapi.io", "posts", "POST");
+      deletePost(
+        "https://63a3f9ae9704d18da09a463d.mockapi.io",
+        "posts",
+        3,
+        "DELETE"
+      );
+    </script>
+  </body>
+</html>
