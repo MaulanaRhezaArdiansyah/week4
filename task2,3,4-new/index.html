@@ -20,9 +20,12 @@
       <input type="submit" id="add" value="Add Post" />
       <input type="submit" id="delete" value="Delete Post" />
     </form>
-    <div id="results"></div>
-    <script src="main.js">
-      displayData();
+    <div id="container-results"></div>
+    <script src="main.js"></script>
+    <script>
+      addPost(`https://63a3f9ae9704d18da09a463d.mockapi.io/posts`);
+      deletePost(`https://63a3f9ae9704d18da09a463d.mockapi.io/posts/6`);
+      getPost();
     </script>
   </body>
 </html>

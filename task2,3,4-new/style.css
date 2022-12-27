@@ -7,9 +7,9 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  height: 100vh;
+  height: 150vh;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 20px 30px;
   display: flex;
   background-color: rgb(243, 243, 243);
@@ -37,6 +37,7 @@ body {
   border-radius: 4px;
   color: white;
   font-size: 16px;
+  cursor: pointer;
 }
 #delete {
   width: 60%;
@@ -46,10 +47,39 @@ body {
   border-radius: 4px;
   color: white;
   font-size: 16px;
+  cursor: pointer;
 }
-#results {
+#container-results {
+  width: 700px;
+  height: 500px;
+  border: 1px solid rgb(147, 147, 147);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(194, 243, 194);
+  border-radius: 4px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 84, 0);
+  border-radius: 4px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 49, 0);
+}
+.results {
   width: 500px;
-  height: 250px;
+  height: 150px;
   background-color: rgb(202, 202, 202);
   border: 2px solid #3f3f3f;
   border-radius: 4px;
@@ -59,7 +89,7 @@ body {
   flex-direction: column;
   gap: 10px;
 }
-#results p:nth-child(1) {
+.results p:nth-child(1) {
   font-style: italic;
   font-weight: bold;
   font-size: 20px;
