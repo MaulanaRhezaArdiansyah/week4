@@ -101,13 +101,25 @@ body {
   gap: 20px;
 }
 .card {
-  width: 350px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   background-color: rgb(220, 250, 220);
   border-radius: 8px;
   border: 2px solid rgb(137, 238, 137);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.card > p:nth-child(1) {
+.text > p:nth-child(1) {
   font-weight: bold;
+}
+.deleteCard {
+  padding: 10px 20px;
+  background-color: rgb(186, 0, 0);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }

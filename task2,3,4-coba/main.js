@@ -35,8 +35,13 @@ const addPost = (url, endpoint, method) => {
         // menampilkan data dari value yang didapat ke halaman web
         result.innerHTML += `
         <div class="card">
-            <p>${json.name}</p>
-            <p>${json.post}</p>
+          <div class="text">
+              <p>${json.name}</p>
+              <p>${json.post}</p>
+          </div>
+          <div>
+              <button class="deleteCard">Delete</button>
+          </div>
         </div>
         `;
       });
@@ -56,3 +61,10 @@ const deletePost = (url, endpoint, id, method) => {
     getPost();
   });
 };
+
+// menghapus card
+// let deleteCardBtn = document.querySelectorAll(".deleteCard");
+
+// deleteCardBtn.addEventListener("click", () => {
+//   console.log("ok");
+// });
